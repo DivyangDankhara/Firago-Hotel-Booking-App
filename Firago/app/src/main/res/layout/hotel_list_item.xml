@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image for hotel -->
+    <ImageView
+        android:id="@+id/hotel_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+    <!-- Name of hotel text view-->
+    <TextView
+        android:id="@+id/hotel_name"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hotel_image"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/hotel_image"
+        android:layout_toRightOf="@+id/hotel_image"
+        android:text="TextView" />
+    <!-- price of hotel-->
+    <TextView
+        android:id="@+id/hotel_price"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@+id/hotel_name"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/hotel_image"
+        android:layout_toRightOf="@+id/hotel_image"
+        android:text="TextView"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+    <!-- symbol for money '$'-->
+    <TextView
+        android:id="@+id/hotel_price_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="$"
+        android:layout_below="@+id/hotel_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/hotel_image"
+        android:layout_toRightOf="@+id/hotel_image"
+        android:textColor="@color/colorGreen"
+        android:textSize="18dp"
+        android:textStyle="bold"
+         />
+    <!-- rating for hotel-->
+    <RatingBar
+        android:id="@+id/ratingBarHotel"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hotel_image"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@+id/hotel_image"
+        android:layout_toRightOf="@+id/hotel_image"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+</RelativeLayout>

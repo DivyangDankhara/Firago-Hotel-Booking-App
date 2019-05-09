@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Firago</string>
+    <string name="SendPage2Btn">send</string>
+    <string name="SendPage3Btn">send2</string>
+    <string name="PreviousPageBtn">Back</string>
+    <string name="PreviousPage1Btn">Back</string>
+    <string name="SwitchNightMode">NightMode</string>
+
+
+    <!--names for the invoice window-->
+    <string name="InvoFName">First Name: </string>
+    <string name="InvoLName">Last Name: </string>
+    <string name="InvoEmail">Email: </string>
+    <string name="InvoContactNo">Contact No: </string>
+    <string name="InvoHotel">Hotel: </string>
+    <string name="InvoPrice">Price: </string>
+    <string name="InvoHDays">Days: </string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="rooms">Rooms:</string>
+    <string name="adults">Adults:</string>
+    <string name="_1">1</string>
+    <string name="children">Children:</string>
+    <string name="SessionTime">Time Remaining in Session </string>
+
+
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+    <!--allows scroller on page-->
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <!--Displays all info according to its orientation  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <!-- this layour applies to rooms-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Rooms Txt View-->
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="150dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/rooms"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!-- Rooms value-->
+                <TextView
+                    android:id="@+id/roomsCount"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="25dp"
+                    android:text="@string/_1"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+            <!-- Slider bar tied to # of rooms-->
+            <SeekBar
+                android:id="@+id/roomsSeekBar"
+                android:layout_width="359dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:max="7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            <!--Layout for Adults -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--TxtView for Adults -->
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/adults"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/roomsSeekBar" />
+                <!--#of adults per room -->
+                <TextView
+                    android:id="@+id/adultsCount"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="25dp"
+                    android:text="@string/_1"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/roomsSeekBar" />
+            </LinearLayout>
+            <!--tied to the value of adults per room -->
+            <SeekBar
+                android:id="@+id/adultsSeekBar"
+                android:layout_width="359dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:max="13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+            <!-- Padding-->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+            <!--layout for dates -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- checkin Txt view-->
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Check-in:"
+                    android:textSize="24sp" />
+                <!--check in date value -->
+                <TextView
+                    android:id="@+id/checkinDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="Select a Date"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!-- layout for check out-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- check out text view-->
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Check-out:"
+                    android:textSize="24sp" />
+                <!-- value for check out-->
+                <TextView
+                    android:id="@+id/checkoutDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="Select a Date"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!--Displays all errors -->
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+            <!--Displays order $total -->
+            <TextView
+                android:id="@+id/orderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Total: $"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!--confirms order and sends to next page -->
+            <Button
+                android:id="@+id/SendReceiptPage"
+                android:layout_width="370dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/confirm_order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/ProgTxt"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SessionTime"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="0"
+                />
+            <ProgressBar
+                android:id="@+id/ProgBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="370dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/SessionTime"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
